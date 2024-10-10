@@ -7,7 +7,7 @@ namespace NerdStore.Catalogo.Application.Services
         Task<IEnumerable<ProdutoDTO>> ObterPorCategoria(int codigo);
         Task<ProdutoDTO> ObterPorId(Guid id);
         Task<IEnumerable<ProdutoDTO>> ObterTodos();
-        Task<IEnumerable<ProdutoDTO>> ObterCategorias();
+        Task<IEnumerable<CategoriaDTO>> ObterCategorias();
 
         Task AdicionarProduto(ProdutoDTO produtoViewModel);
         Task AtualizarProduto(ProdutoDTO produtoViewModel);

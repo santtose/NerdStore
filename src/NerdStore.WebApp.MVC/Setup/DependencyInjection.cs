@@ -3,6 +3,8 @@ using NerdStore.Catalogo.Data.Repository;
 using NerdStore.Catalogo.Data;
 using NerdStore.Core.Bus;
 using NerdStote.Catalogo.Domain;
+using MediatR;
+using NerdStote.Catalogo.Domain.Events;
 
 namespace NerdStore.WebApp.MVC.Setup
 {
@@ -18,6 +20,8 @@ namespace NerdStore.WebApp.MVC.Setup
             services.AddScoped<IProdutoAppService, ProdutoAppService>();
             services.AddScoped<IEstoqueService, EstoqueService>();
             services.AddScoped<CatalogoContext>();
+
+            services.AddScoped<INotificationHandler<ProdutoAbaixoEstoqueEvent>, ProdutoEventHandler>();
         }
     }
 }

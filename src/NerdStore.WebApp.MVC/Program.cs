@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using NerdStore.Catalogo.Application.AutoMapper;
 using NerdStore.Catalogo.Data;
 using NerdStore.WebApp.MVC.Data;
+using NerdStore.WebApp.MVC.Setup;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +27,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddAutoMapper(typeof(DomainToViewModelMappingProfile), typeof(ViewModelToDomainMappingProfile));
 
 builder.Services.AddMediatR(typeof(Program));
+
+builder.Services.RegisterServices();
 
 var app = builder.Build();
 
@@ -50,7 +53,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Vitrine}/{action=Index}/{id?}");
 app.MapRazorPages();
 
 app.Run();

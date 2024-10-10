@@ -33,9 +33,9 @@ namespace NerdStore.Catalogo.Application.Services
             return _mapper.Map<IEnumerable<ProdutoDTO>>(await _produtoRepository.ObterTodos());
         }
 
-        public async Task<IEnumerable<ProdutoDTO>> ObterCategorias()
+        public async Task<IEnumerable<CategoriaDTO>> ObterCategorias()
         {
-            return _mapper.Map<IEnumerable<ProdutoDTO>>(await _produtoRepository.ObterCategorias());
+            return _mapper.Map<IEnumerable<CategoriaDTO>>(await _produtoRepository.ObterCategorias());
         }
 
         public async Task AdicionarProduto(ProdutoDTO produtoViewModel)

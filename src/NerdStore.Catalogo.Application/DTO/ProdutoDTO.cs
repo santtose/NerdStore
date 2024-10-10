@@ -44,6 +44,6 @@ namespace NerdStore.Catalogo.Application.DTO
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         public int Profundidade { get; set; }
 
-        public IEnumerable<CategoriaDTO> Categorias { get; set; }
+        public IEnumerable<CategoriaDTO>? Categorias { get; set; }
     }
 }
