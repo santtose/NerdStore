@@ -5,6 +5,7 @@ using NerdStore.Core.Bus;
 using NerdStote.Catalogo.Domain;
 using MediatR;
 using NerdStote.Catalogo.Domain.Events;
+using NerdStore.Vendas.Application.Commands;
 
 namespace NerdStore.WebApp.MVC.Setup
 {
@@ -20,6 +21,9 @@ namespace NerdStore.WebApp.MVC.Setup
             services.AddScoped<IProdutoAppService, ProdutoAppService>();
             services.AddScoped<IEstoqueService, EstoqueService>();
             services.AddScoped<CatalogoContext>();
+
+            // Vendas
+            services.AddScoped<IRequestHandler<AdicionarItemPedidoCommand, bool>, PedidoCommandHandler>();
 
             services.AddScoped<INotificationHandler<ProdutoAbaixoEstoqueEvent>, ProdutoEventHandler>();
         }
