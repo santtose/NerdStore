@@ -1,4 +1,4 @@
-﻿using NerdStore.Core.DomainObjects;
+﻿using NerdStore.Core.Messages.CommonMessages.DomainEvents;
 using System;
 
 namespace NerdStote.Catalogo.Domain.Events

@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>aspnet-NerdStore.WebApp.MVC-e057d996-fbfd-4108-8db2-37b62f354987</UserSecretsId>
   </PropertyGroup>

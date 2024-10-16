@@ -1,4 +1,4 @@
-﻿using NerdStore.Core.Bus;
+﻿using NerdStore.Core.Communication.Mediator;
 using NerdStote.Catalogo.Domain.Events;
 using System;
 using System.Threading.Tasks;
