@@ -15,9 +15,10 @@ namespace NerdStore.Vendas.Data
     {
         private readonly IMediatorHandler _mediatorHandler;
 
-        public VendasContext(DbContextOptions<VendasContext> options)
+        public VendasContext(DbContextOptions<VendasContext> options, IMediatorHandler mediatorHandler)
             : base(options)
         {
+            _mediatorHandler = mediatorHandler;
         }
 
         public DbSet<Pedido> Pedidos { get; set; }
@@ -41,7 +42,7 @@ namespace NerdStore.Vendas.Data
             }
 
             var sucesso = await base.SaveChangesAsync() > 0;
-            //if (sucesso) await _mediatorHandler.PublicarEventos(this);
+            if (sucesso) await _mediatorHandler.PublicarEventos(this);
 
             return sucesso;
         }

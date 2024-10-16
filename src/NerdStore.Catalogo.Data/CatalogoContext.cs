@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NerdStore.Core.Data;
+using NerdStore.Core.Messages;
 using NerdStote.Catalogo.Domain;
 
 namespace NerdStore.Catalogo.Data
@@ -16,6 +17,8 @@ namespace NerdStore.Catalogo.Data
             foreach (var property in modelBuilder.Model.GetEntityTypes().SelectMany(
                 e => e.GetProperties().Where(p => p.ClrType == typeof(string))))
                 property.SetColumnType("varchar(100)");
+
+            modelBuilder.Ignore<Event>();
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(CatalogoContext).Assembly);
         }
