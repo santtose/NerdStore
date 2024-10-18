@@ -33,6 +33,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NerdStore.Vendas.Applicatio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NerdStore.Vendas.Data", "src\NerdStore.Vendas.Data\NerdStore.Vendas.Data.csproj", "{7CEA7B5C-472B-4B3E-8E28-368F48D56E02}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pagamentos", "Pagamentos", "{28FD441F-7B94-44D1-BB8C-0FF575FC50E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NerdStore.Pagamentos.AntiCorruption", "src\NerdStore.Pagamentos.AntiCorruption\NerdStore.Pagamentos.AntiCorruption.csproj", "{403568E7-AE23-4A98-8764-D49ACE8D63F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NerdStore.Pagamentos.Business", "src\NerdStore.Pagamentos.Business\NerdStore.Pagamentos.Business.csproj", "{29ED21CD-17C1-4573-8C55-26C5B0AC8446}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NerdStore.Pagamentos.Data", "src\NerdStore.Pagamentos.Data\NerdStore.Pagamentos.Data.csproj", "{8808D867-A597-4270-8B0E-2C42C18B54F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +83,18 @@ Global
 		{7CEA7B5C-472B-4B3E-8E28-368F48D56E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CEA7B5C-472B-4B3E-8E28-368F48D56E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CEA7B5C-472B-4B3E-8E28-368F48D56E02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{403568E7-AE23-4A98-8764-D49ACE8D63F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{403568E7-AE23-4A98-8764-D49ACE8D63F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{403568E7-AE23-4A98-8764-D49ACE8D63F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{403568E7-AE23-4A98-8764-D49ACE8D63F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29ED21CD-17C1-4573-8C55-26C5B0AC8446}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29ED21CD-17C1-4573-8C55-26C5B0AC8446}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29ED21CD-17C1-4573-8C55-26C5B0AC8446}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29ED21CD-17C1-4573-8C55-26C5B0AC8446}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8808D867-A597-4270-8B0E-2C42C18B54F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8808D867-A597-4270-8B0E-2C42C18B54F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8808D867-A597-4270-8B0E-2C42C18B54F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8808D867-A597-4270-8B0E-2C42C18B54F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +113,10 @@ Global
 		{08E6A995-DB61-4629-BFC9-A4FF67EE5585} = {825C241D-BC83-4747-AA21-3B892E9FA6ED}
 		{DF8043EF-ECF6-48F5-B0CF-AD640AEA7F06} = {825C241D-BC83-4747-AA21-3B892E9FA6ED}
 		{7CEA7B5C-472B-4B3E-8E28-368F48D56E02} = {825C241D-BC83-4747-AA21-3B892E9FA6ED}
+		{28FD441F-7B94-44D1-BB8C-0FF575FC50E4} = {50EC8F7D-7C00-4784-A8A8-4A211DCEF2E9}
+		{403568E7-AE23-4A98-8764-D49ACE8D63F9} = {28FD441F-7B94-44D1-BB8C-0FF575FC50E4}
+		{29ED21CD-17C1-4573-8C55-26C5B0AC8446} = {28FD441F-7B94-44D1-BB8C-0FF575FC50E4}
+		{8808D867-A597-4270-8B0E-2C42C18B54F8} = {28FD441F-7B94-44D1-BB8C-0FF575FC50E4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BAC2D842-94F4-4328-855C-0DA9C084D8B2}
