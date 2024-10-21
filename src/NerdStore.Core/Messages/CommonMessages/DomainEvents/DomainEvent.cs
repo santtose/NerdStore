@@ -1,12 +1,15 @@
-﻿using NerdStore.Core.Messages;
+﻿using MediatR;
 
 namespace NerdStore.Core.Messages.CommonMessages.DomainEvents
 {
-    public class DomainEvent : Event
+    public class DomainEvent : Message, INotification
     {
+        public DateTime Timestamp { get; private set; }
+
         public DomainEvent(Guid aggregateId)
         {
             AggregateId = aggregateId;
+            Timestamp = DateTime.Now;
         }
     }
 }
