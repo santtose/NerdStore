@@ -1,6 +1,5 @@
 ﻿using MediatR;
 using NerdStore.Core.Communication.Mediator;
-using NerdStore.Core.Messages;
 using NerdStore.Core.Messages.CommonMessages.IntegrationEvents;
 using NerdStore.Core.Messages.CommonMessages.InterationEvents;
 using NerdStore.Vendas.Application.Commands;
@@ -9,7 +8,6 @@ namespace NerdStore.Vendas.Application.Events
 {
     public class PedidoEventHandler :
         INotificationHandler<PedidoRascunhoIniciadoEvent>,
-        INotificationHandler<PedidoAtualizadoEvent>,
         INotificationHandler<PedidoItemAdicionadoEvent>,
         INotificationHandler<PedidoEstoqueRejeitadoEvent>,
         INotificationHandler<PagamentoRealizadoEvent>,
@@ -23,11 +21,6 @@ namespace NerdStore.Vendas.Application.Events
         }
 
         public Task Handle(PedidoRascunhoIniciadoEvent notification, CancellationToken cancellationToken)
-        {
-            return Task.CompletedTask;
-        }
-
-        public Task Handle(PedidoAtualizadoEvent notification, CancellationToken cancellationToken)
         {
             return Task.CompletedTask;
         }

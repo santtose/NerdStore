@@ -20,6 +20,7 @@ using NerdStore.Core.Messages.CommonMessages.InterationEvents;
 using NerdStore.Core.Messages.CommonMessages.IntegrationEvents;
 using EventSourcing;
 using NerdStore.Core.Data.EventSourcing;
+using NerdStore.Pagamentos.Business.Events;
 
 namespace NerdStore.WebApp.MVC.Setup
 {
@@ -66,8 +67,6 @@ namespace NerdStore.WebApp.MVC.Setup
             services.AddScoped<INotificationHandler<PagamentoRealizadoEvent>, PedidoEventHandler>();
             services.AddScoped<INotificationHandler<PagamentoRecusadoEvent>, PedidoEventHandler>();
 
-            services.AddScoped<IRequestHandler<AdicionarItemPedidoCommand, bool>, PedidoCommandHandler>();
-
             // Pagamento
             services.AddScoped<IPagamentoRepository, PagamentoRepository>();
             services.AddScoped<IPagamentoService, PagamentoService>();
@@ -76,7 +75,7 @@ namespace NerdStore.WebApp.MVC.Setup
             services.AddScoped<IConfigurationManager, Pagamentos.AntiCorruption.ConfigurationManager>();
             services.AddScoped<PagamentoContext>();
 
-            services.AddScoped<INotificationHandler<ProdutoAbaixoEstoqueEvent>, ProdutoEventHandler>();
+            services.AddScoped<INotificationHandler<PedidoEstoqueConfirmadoEvent>, PagamentoEventHandler>();
         }
     }
 }

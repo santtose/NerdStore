@@ -77,6 +77,7 @@ namespace NerdStote.Catalogo.Domain
             produto.ReporEstoque(quantidade);
 
             _produtoRepository.Atualizar(produto);
+
             return await _produtoRepository.UnitOfWork.Commit();
         }
 
