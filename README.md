@@ -1,7 +1,7 @@
 # Projeto NerdStore - Modelando Domínios Ricos do curso Desenvolvedor.io
 
 É um sistema simples de e-comerce orientada a eventos, onde é possível adicionar itens ao estoque que serão disponibilizados para venda, onde o usuário pode escolher os produtos, e enviá-los para um carrinho,
-onde é possível adicionar vouchers de desconto, atualizar quantidade, deletar um pedido do carrinho, e fim, o básico de um e-comerce real, inclusive a parte de pagamento, que no caso do projeto é de
+onde é possível adicionar vouchers de desconto, atualizar quantidade, deletar um pedido do carrinho, em fim, o básico de um e-comerce real, inclusive a parte de pagamento, que no caso do projeto é de
 forma simulada com PayPalGateway onde é possível concluir o pagamento ou a compra ser recusada.
 Sendo possível visualizar um histórico de eventos dos pedidos finalizados (pagos).
 A interface é simples, é um projeto básico MVC, com o intuito de facilitar a visualização e entendimento dos testes e funcionamento do sistema em si.
