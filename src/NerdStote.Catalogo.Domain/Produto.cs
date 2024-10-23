@@ -5,6 +5,8 @@ namespace NerdStote.Catalogo.Domain
 {
     public class Produto : Entity, IAggregateRoot // Indica que essa classe é uma raiz de agregação
     {
+        // As propriedades de uma classe são "ESTADOS"
+        // Os metodos abaixo são conhecidos como "COMPORTAMENTOS" de uma classe
         public Guid CategoriaId { get; private set; }
         public string Nome { get; private set; }
         public string Descricao { get; private set; }
@@ -32,7 +34,7 @@ namespace NerdStote.Catalogo.Domain
             Validar();
         }
 
-        // had Hoc Setter (alterar o estado de propriedades privadas)
+        // had Hoc Setter (altera o estado de propriedades privadas)
         public void Ativar() => Ativo = true;
 
         public void Desativar() => Ativo = false;

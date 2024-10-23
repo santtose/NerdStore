@@ -5,6 +5,7 @@ namespace NerdStore.Core.DomainObjects
 {
     public abstract class Entity
     {
+        // GUID é uma boa prática principalmente em projetso complexos, um dos motivos é saber o valor do seu id antes de persistir na base.
         public Guid Id { get; set; }
 
         private List<Event> _notificacoes;
