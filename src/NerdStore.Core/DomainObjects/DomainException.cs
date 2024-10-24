@@ -1,5 +1,6 @@
 ﻿namespace NerdStore.Core.DomainObjects
 {
+    // Classe especializada. Exceção personalizada
     public class DomainException : Exception
     {
         public DomainException()

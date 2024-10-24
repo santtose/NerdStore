@@ -15,7 +15,7 @@ namespace NerdStote.Catalogo.Domain
         public DateTime DataCadastro { get; private set; }
         public string Imagem { get; private set; }
         public int QuantidadeEstoque { get; private set; }
-        public Dimensoes Dimensoes { get; private set; }
+        public Dimensoes Dimensoes { get; private set; } // Objeto de valor
         public Categoria Categoria { get; private set; }
 
         protected Produto() { }
