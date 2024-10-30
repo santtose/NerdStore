@@ -52,6 +52,8 @@ namespace NerdStote.Catalogo.Domain
             // TODO: 10 pode ser parametrizavel em arquivo de configuração
             if (produto.QuantidadeEstoque < 10)
             {
+                // É criado esse evento separado, pois ele foge da especificacao do metodo que é debitar.
+                // Esse evento poderia ser, enviar um e-mail, notificar o usuário etc.
                 await _mediatorHandler.PublicarDomainEvent(new ProdutoAbaixoEstoqueEvent(produto.Id, produto.QuantidadeEstoque));
             }
 
