@@ -50,7 +50,7 @@ namespace NerdStore.WebApp.MVC.Setup
 
             // Vendas
             services.AddScoped<IPedidoRepository, PedidoRepository>();
-            services.AddScoped<IPedidoQueries, PedidoQueries>();
+            services.AddScoped<IPedidoQueries, PedidoQueries>();// Query Facade
             services.AddScoped<VendasContext>();
 
             services.AddScoped<IRequestHandler<AdicionarItemPedidoCommand, bool>, PedidoCommandHandler>();

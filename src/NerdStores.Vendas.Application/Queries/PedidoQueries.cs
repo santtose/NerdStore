@@ -3,6 +3,7 @@ using NerdStore.Vendas.Domain;
 
 namespace NerdStore.Vendas.Application.Queries
 {
+    //Query Facade
     public class PedidoQueries : IPedidoQueries
     {
         private readonly IPedidoRepository _pedidoRepository;
